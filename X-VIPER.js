@@ -1022,7 +1022,7 @@ store.bind(sock.ev);
         
         if (lastPairingMessage) {
         const connectedMenu = `<blockquote><pre>
-⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Number: ${lastPairingMessage.phoneNumber}
 ⌑ Pairing Code: ${lastPairingMessage.pairingCode}
 ⌑ Type: Sudah Terhubung
@@ -1124,7 +1124,7 @@ bot.command("addpairing", async (ctx) => {
     const formattedCode = code?.match(/.{1,4}/g)?.join("-") || code;
 
     const pairingMenu = `<blockquote><pre>
-⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Number: ${phoneNumber}
 ⌑ Pairing Code: ${formattedCode}
 ⌑ Status Bot : Belum Terhubung
@@ -1164,7 +1164,7 @@ if (sock) {
   sock.ev.on("connection.update", async (update) => {
     if (update.connection === "open" && lastPairingMessage) {
       const updateConnectionMenu = `<blockquote><pre>
-⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Number: ${lastPairingMessage.phoneNumber}
 ⌑ Pairing Code: ${lastPairingMessage.pairingCode}
 ⌑ Status Bot : Sudah Terhubung
@@ -1847,7 +1847,7 @@ bot.action("/start", async (ctx) => {
 ────────────────────
 ☰ OPTION DEVELOPERS
 OWNER : @ferdianzxc
-PARTNER : Dapa
+PARTNER : Olanz
 SYSTEM : Auto-Update Latest
 ACCESS : Collaboration Verified
 Sender : ${senderStatus}
@@ -1985,7 +1985,7 @@ bot.action('/setting_menu', async (ctx) => {
 ♡ /spotify → Search Lagu
 ────────────────────
 Security Mode : ACTIVE 
-Network       : X-hunter Core</blockquote>`;
+Network       : X-viper Core</blockquote>`;
 
     const keyboard = [
         [
@@ -2275,7 +2275,7 @@ bot.command("bug", premGroupOnly(), checkCooldown, checkWhatsAppConnection, asyn
     { source: "./image/MagicClowerd.jpg" },
     {
       caption: `
-<blockquote><pre>⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+<blockquote><pre>⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Target : ${q}
 ⌑ Status : Ready
 ⌑ Note : No Spam Bug
@@ -2512,7 +2512,7 @@ vnf: {
     { source: "./image/MagicClowerd.jpg" },
     {
       caption: `
-<blockquote><pre>⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+<blockquote><pre>⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Target : ${target.split("@")[0]}
 ⌑ Method : ${method.name}
 ⌑ Note : No Spam Bug
@@ -2535,7 +2535,7 @@ vnf: {
       msg.message_id,
       null,
       `
-<blockquote><pre>⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+<blockquote><pre>⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Target : ${target.split("@")[0]}
 ⌑ Method : ${method.name}
 ⌑ Note : No Spam Bug
@@ -2556,7 +2556,7 @@ vnf: {
     msg.message_id,
     null,
     `
-<blockquote><pre>⬡═―—⊱ ⎧ X-HUNTER ⎭ ⊰―—═⬡
+<blockquote><pre>⬡═―—⊱ ⎧ X-VIPER ⎭ ⊰―—═⬡
 ⌑ Target : ${target.split("@")[0]}
 ⌑ Method : ${method.name}
 ⌑ Note : No Spam Bug
